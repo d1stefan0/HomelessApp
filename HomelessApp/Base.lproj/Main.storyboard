@@ -291,7 +291,7 @@
         <scene sceneID="4Ky-2z-29r">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rmI-bY-Hbf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Еда" image="running" id="B7h-Ek-z28"/>
+                    <tabBarItem key="tabBarItem" title="Еда" image="eats" id="B7h-Ek-z28"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TRP-J6-v89">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -337,7 +337,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="healthy" id="Mg7-Pc-5wQ">
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="eats" id="Mg7-Pc-5wQ">
                                             <rect key="frame" x="20" y="13.5" width="16" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
@@ -377,6 +377,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="eats" width="16" height="16"/>
         <image name="education" width="16" height="16"/>
         <image name="healthy" width="16" height="16"/>
         <image name="homeless" width="186" height="160"/>
