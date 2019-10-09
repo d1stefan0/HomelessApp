@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "homeless.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "restaurant.png",
       "scale" : "2x"
     },
     {

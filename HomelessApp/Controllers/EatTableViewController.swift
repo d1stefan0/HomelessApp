@@ -96,10 +96,10 @@ class EatTableViewController: UITableViewController {
         if indexPath.section == 1 {
             switch indexPath.row {
             case 0:
-                person.health -= 10
-                person.money += 5
-                person.eat -= 1
-                person.happiness -= 1
+                person.health += 1
+                person.money += 1
+                person.eat += 1
+                person.happiness += 1
             case 1:
                 person.health -= 12
                 person.money += 8
