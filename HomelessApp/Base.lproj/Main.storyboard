@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="player" id="6C3-9N-5ze" customClass="PlayerTableViewCell" customModule="HomelessApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="player" id="6C3-9N-5ze" customClass="PlayerTableViewCell" customModule="HomelessApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6C3-9N-5ze" id="2ah-Oh-NOe">
@@ -26,7 +26,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="vyY-qt-n9l" imageView="n05-Nn-YZB" style="IBUITableViewCellStyleDefault" id="mqV-h3-HoG" customClass="PlayerTableViewCell" customModule="HomelessApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="vyY-qt-n9l" detailTextLabel="SZB-n1-FJ6" imageView="n05-Nn-YZB" style="IBUITableViewCellStyleValue1" id="mqV-h3-HoG" customClass="PlayerTableViewCell" customModule="HomelessApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="71.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mqV-h3-HoG" id="sK1-Ib-ZxI">
@@ -34,7 +34,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vyY-qt-n9l">
-                                            <rect key="frame" x="51" y="0.0" width="343" height="43.5"/>
+                                            <rect key="frame" x="51" y="12" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -44,6 +44,13 @@
                                             <rect key="frame" x="20" y="13.5" width="16" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SZB-n1-FJ6">
+                                            <rect key="frame" x="335" y="12" width="59" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -130,11 +137,11 @@
             </objects>
             <point key="canvasLocation" x="680" y="2596"/>
         </scene>
-        <!--Info-->
+        <!--Инфо-->
         <scene sceneID="aSo-f7-jrl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4dg-qT-z84" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Info" image="info" id="uOh-eO-wru"/>
+                    <tabBarItem key="tabBarItem" title="Инфо" image="info" id="uOh-eO-wru"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X7E-9f-dgn">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -149,11 +156,11 @@
             </objects>
             <point key="canvasLocation" x="1790" y="1202"/>
         </scene>
-        <!--Education-->
+        <!--Образование-->
         <scene sceneID="h7x-f1-RaV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="goe-oD-fCX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Education" image="education" selectedImage="education" id="RcP-Ab-8hH"/>
+                    <tabBarItem key="tabBarItem" title="Образование" image="education" selectedImage="education" id="RcP-Ab-8hH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="65t-ry-H4R">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -219,11 +226,11 @@
             </objects>
             <point key="canvasLocation" x="2698.5507246376815" y="2595.5357142857142"/>
         </scene>
-        <!--Work-->
+        <!--Работа-->
         <scene sceneID="gkn-0w-N2t">
             <objects>
                 <navigationController id="258-xD-jCc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Work" image="work" selectedImage="work" id="Lig-eQ-K9M"/>
+                    <tabBarItem key="tabBarItem" title="Работа" image="work" selectedImage="work" id="Lig-eQ-K9M"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bAR-qO-0gZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

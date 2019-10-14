@@ -6,7 +6,7 @@ class Person{
     var eat: Int
     var happiness: Int
     
-    static var sharedPerson = Person(health: 99, money: 99, eat: 99, happiness: 99)
+    static var sharedPerson = Person(health: 100, money: 1000, eat: 100, happiness: 100)
     
     init(health: Int, money: Int, eat: Int, happiness: Int) {
         self.health = health
