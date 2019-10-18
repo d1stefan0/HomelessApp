@@ -9,7 +9,7 @@
 import UIKit
 
 class EatTableViewController: UITableViewController {
-
+    
     let eat = ["Пожрать на помойке", "Хот-дог", "Кафе", "Закупиться в магазине", "Жениться"]
     let drink = ["Пиво", "Водка", "Виски", "Коньяк ХО", "Пить в баре"]
     let playerCell = "PlayerTableViewCell"
@@ -18,67 +18,68 @@ class EatTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.register(UINib(nibName: playerCell, bundle: nil), forCellReuseIdentifier: "player")
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 3
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         if section == 0 {
+        if section == 0 {
             return 1
         } else if section == 1 {
             return eat.count
-         } else {
+        } else {
             return drink.count
         }
     }
-
+    
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "header")
-            let text: String
-            let color: UIColor
-            if section == 1 {
-                text = "Еда"
-                color = .yellow
-            } else if section == 2 {
-                text = "Напитки"
-                color = .red
-                header?.textLabel?.text = text
-                header?.backgroundColor = color}
-            return header
+        let text: String
+        let color: UIColor
+        if section == 1 {
+            text = "Еда"
+            color = .yellow
+        } else if section == 2 {
+            text = "Напитки"
+            color = .red
+            header?.textLabel?.text = text
+            header?.backgroundColor = color
         }
+        return header
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-         if indexPath.section == 0 {
-               let cell = tableView.dequeueReusableCell(withIdentifier: "player") as! PlayerTableViewCell
-
-                cell.healthLabel.text = String(person.health)
-                  cell.moneyLabel.text = String(person.money)
-                  cell.eatLabel.text = String(person.eat)
-                  cell.happinessLabel.text = String(person.happiness)
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "player") as! PlayerTableViewCell
+            
+            cell.healthLabel.text = String(person.health)
+            cell.moneyLabel.text = String(person.money)
+            cell.eatLabel.text = String(person.eat)
+            cell.happinessLabel.text = String(person.happiness)
             cell.layoutSubviews()
-                
+            
             return cell
             
-         } else if indexPath.section == 1 {
+        } else if indexPath.section == 1 {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") {
                 cell.textLabel?.text = eat[indexPath.row]
                 return cell
             }
-         } else {
+        } else {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") {
                 cell.textLabel?.text = drink[indexPath.row]
                 return cell
             }
         }
-
+        
         return UITableViewCell()
     }
     
@@ -90,7 +91,7 @@ class EatTableViewController: UITableViewController {
             return 44.0
         }
     }
-
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.section == 1 {
@@ -159,5 +160,5 @@ class EatTableViewController: UITableViewController {
             tableView.reloadData()
         }
     }
-
+    
 }

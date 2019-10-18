@@ -14,13 +14,13 @@
 		CEDA30D7234051500087E1BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86CAB52337B3A1000393A9 /* AppDelegate.swift */; };
 		CEDA30D8234051500087E1BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86CAB72337B3A1000393A9 /* ViewController.swift */; };
 		CEDA30DD234051500087E1BB /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA30D423404F840087E1BB /* InfoViewController.swift */; };
-		CEDA30DE234051500087E1BB /* EducationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB877DA23404D0C005B724D /* EducationTableViewController.swift */; };
 		CEDA30DF234051500087E1BB /* WorkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86CAE523399C75000393A9 /* WorkTableViewController.swift */; };
 		CEDA30E0234051500087E1BB /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB877CF23404C9A005B724D /* PlayerTableViewCell.swift */; };
 		CEDA30E3234052760087E1BB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA30E2234052760087E1BB /* SettingsViewController.swift */; };
 		CEDA30E5234055150087E1BB /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA30E4234055150087E1BB /* Person.swift */; };
 		CEDA3186234A21E70087E1BB /* EatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA3185234A21E70087E1BB /* EatTableViewController.swift */; };
 		CEDA3188234D5C2F0087E1BB /* HealthTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA3187234D5C2F0087E1BB /* HealthTableViewController.swift */; };
+		CEE995BA2354BDF60059643B /* EducationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE995B92354BDF50059643B /* EducationTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,12 +34,12 @@
 		CE86CAE523399C75000393A9 /* WorkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTableViewController.swift; sourceTree = "<group>"; };
 		CEB877CF23404C9A005B724D /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		CEB877D123404C9B005B724D /* PlayerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerTableViewCell.xib; sourceTree = "<group>"; };
-		CEB877DA23404D0C005B724D /* EducationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EducationTableViewController.swift; path = ../../../../../.Trash/EducationTableViewController.swift; sourceTree = "<group>"; };
 		CEDA30D423404F840087E1BB /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		CEDA30E2234052760087E1BB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CEDA30E4234055150087E1BB /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		CEDA3185234A21E70087E1BB /* EatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatTableViewController.swift; sourceTree = "<group>"; };
 		CEDA3187234D5C2F0087E1BB /* HealthTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthTableViewController.swift; sourceTree = "<group>"; };
+		CEE995B92354BDF50059643B /* EducationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,7 @@
 			children = (
 				CEDA30E2234052760087E1BB /* SettingsViewController.swift */,
 				CEDA30D423404F840087E1BB /* InfoViewController.swift */,
-				CEB877DA23404D0C005B724D /* EducationTableViewController.swift */,
+				CEE995B92354BDF50059643B /* EducationTableViewController.swift */,
 				CE86CAE523399C75000393A9 /* WorkTableViewController.swift */,
 				CEDA3185234A21E70087E1BB /* EatTableViewController.swift */,
 				CEDA3187234D5C2F0087E1BB /* HealthTableViewController.swift */,
@@ -180,11 +180,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDA30E5234055150087E1BB /* Person.swift in Sources */,
+				CEE995BA2354BDF60059643B /* EducationTableViewController.swift in Sources */,
 				CEDA30D7234051500087E1BB /* AppDelegate.swift in Sources */,
 				CEDA30D8234051500087E1BB /* ViewController.swift in Sources */,
 				CEDA3188234D5C2F0087E1BB /* HealthTableViewController.swift in Sources */,
 				CEDA30DD234051500087E1BB /* InfoViewController.swift in Sources */,
-				CEDA30DE234051500087E1BB /* EducationTableViewController.swift in Sources */,
 				CEDA30DF234051500087E1BB /* WorkTableViewController.swift in Sources */,
 				CEDA3186234A21E70087E1BB /* EatTableViewController.swift in Sources */,
 				CEDA30E0234051500087E1BB /* PlayerTableViewCell.swift in Sources */,
