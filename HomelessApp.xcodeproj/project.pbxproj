@@ -10,9 +10,9 @@
 		CE86CABB2337B3A1000393A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE86CAB92337B3A1000393A9 /* Main.storyboard */; };
 		CE86CABD2337B3A2000393A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE86CABC2337B3A2000393A9 /* Assets.xcassets */; };
 		CE86CAC02337B3A2000393A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE86CABE2337B3A2000393A9 /* LaunchScreen.storyboard */; };
+		CE96B9A22359527700EE2579 /* WorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96B9A12359527700EE2579 /* WorkModel.swift */; };
 		CEB877D723404C9B005B724D /* PlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB877D123404C9B005B724D /* PlayerTableViewCell.xib */; };
 		CEDA30D7234051500087E1BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86CAB52337B3A1000393A9 /* AppDelegate.swift */; };
-		CEDA30D8234051500087E1BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86CAB72337B3A1000393A9 /* ViewController.swift */; };
 		CEDA30DD234051500087E1BB /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA30D423404F840087E1BB /* InfoViewController.swift */; };
 		CEDA30DF234051500087E1BB /* WorkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86CAE523399C75000393A9 /* WorkTableViewController.swift */; };
 		CEDA30E0234051500087E1BB /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB877CF23404C9A005B724D /* PlayerTableViewCell.swift */; };
@@ -21,17 +21,18 @@
 		CEDA3186234A21E70087E1BB /* EatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA3185234A21E70087E1BB /* EatTableViewController.swift */; };
 		CEDA3188234D5C2F0087E1BB /* HealthTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA3187234D5C2F0087E1BB /* HealthTableViewController.swift */; };
 		CEE995BA2354BDF60059643B /* EducationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE995B92354BDF50059643B /* EducationTableViewController.swift */; };
+		CEE995BC2359182A0059643B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE995BB2359182A0059643B /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE86CAB22337B3A1000393A9 /* HomelessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomelessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE86CAB52337B3A1000393A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE86CAB72337B3A1000393A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE86CABA2337B3A1000393A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE86CABC2337B3A2000393A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE86CABF2337B3A2000393A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE86CAC12337B3A2000393A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE86CAE523399C75000393A9 /* WorkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTableViewController.swift; sourceTree = "<group>"; };
+		CE96B9A12359527700EE2579 /* WorkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkModel.swift; sourceTree = "<group>"; };
 		CEB877CF23404C9A005B724D /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		CEB877D123404C9B005B724D /* PlayerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerTableViewCell.xib; sourceTree = "<group>"; };
 		CEDA30D423404F840087E1BB /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +41,7 @@
 		CEDA3185234A21E70087E1BB /* EatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatTableViewController.swift; sourceTree = "<group>"; };
 		CEDA3187234D5C2F0087E1BB /* HealthTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthTableViewController.swift; sourceTree = "<group>"; };
 		CEE995B92354BDF50059643B /* EducationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationTableViewController.swift; sourceTree = "<group>"; };
+		CEE995BB2359182A0059643B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				CEDA30E4234055150087E1BB /* Person.swift */,
+				CE96B9A12359527700EE2579 /* WorkModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -64,6 +67,7 @@
 		CE76260E233F8DC7003B82CB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CEE995BB2359182A0059643B /* ViewController.swift */,
 				CEDA30E2234052760087E1BB /* SettingsViewController.swift */,
 				CEDA30D423404F840087E1BB /* InfoViewController.swift */,
 				CEE995B92354BDF50059643B /* EducationTableViewController.swift */,
@@ -96,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				CE86CAB52337B3A1000393A9 /* AppDelegate.swift */,
-				CE86CAB72337B3A1000393A9 /* ViewController.swift */,
 				CE86CAB92337B3A1000393A9 /* Main.storyboard */,
 				CE76260D233F8DB5003B82CB /* Model */,
 				CE76260E233F8DC7003B82CB /* Controllers */,
@@ -179,10 +182,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE96B9A22359527700EE2579 /* WorkModel.swift in Sources */,
+				CEE995BC2359182A0059643B /* ViewController.swift in Sources */,
 				CEDA30E5234055150087E1BB /* Person.swift in Sources */,
 				CEE995BA2354BDF60059643B /* EducationTableViewController.swift in Sources */,
 				CEDA30D7234051500087E1BB /* AppDelegate.swift in Sources */,
-				CEDA30D8234051500087E1BB /* ViewController.swift in Sources */,
 				CEDA3188234D5C2F0087E1BB /* HealthTableViewController.swift in Sources */,
 				CEDA30DD234051500087E1BB /* InfoViewController.swift in Sources */,
 				CEDA30DF234051500087E1BB /* WorkTableViewController.swift in Sources */,
