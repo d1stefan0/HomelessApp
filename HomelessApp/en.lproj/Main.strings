@@ -1,0 +1,69 @@
+
+/* Class = "UINavigationItem"; title = "Еда"; ObjectID = "1Af-vh-ccT"; */
+"1Af-vh-ccT.title" = "Еда";
+
+/* Class = "UIButton"; normalTitle = "Новая игра"; ObjectID = "1Ua-Ej-Q0B"; */
+"1Ua-Ej-Q0B.normalTitle" = "Новая игра";
+
+/* Class = "UINavigationItem"; title = "Работа"; ObjectID = "7f0-Qg-ldB"; */
+"7f0-Qg-ldB.title" = "Работа";
+
+/* Class = "UINavigationItem"; title = "Образовние"; ObjectID = "A2N-zY-A8n"; */
+"A2N-zY-A8n.title" = "Образовние";
+
+/* Class = "UITabBarItem"; title = "Еда"; ObjectID = "B7h-Ek-z28"; */
+"B7h-Ek-z28.title" = "Еда";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Jfa-rX-fak"; */
+"Jfa-rX-fak.text" = "Title";
+
+/* Class = "UITabBarItem"; title = "Работа"; ObjectID = "Lig-eQ-K9M"; */
+"Lig-eQ-K9M.title" = "Работа";
+
+/* Class = "UILabel"; text = "version"; ObjectID = "NpV-Jf-0xM"; */
+"NpV-Jf-0xM.text" = "version";
+
+/* Class = "UILabel"; text = "Homeless App"; ObjectID = "OyJ-Ed-5LF"; */
+"OyJ-Ed-5LF.text" = "Homeless App";
+
+/* Class = "UITabBarItem"; title = "Образование"; ObjectID = "RcP-Ab-8hH"; */
+"RcP-Ab-8hH.title" = "Образование";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "SZB-n1-FJ6"; */
+"SZB-n1-FJ6.text" = "Subtitle";
+
+/* Class = "UITabBarItem"; title = "Главная"; ObjectID = "Vog-Rz-jff"; */
+"Vog-Rz-jff.title" = "Главная";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "W3q-Yk-mFd"; */
+"W3q-Yk-mFd.text" = "Detail";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "WcG-jE-fWg"; */
+"WcG-jE-fWg.text" = "Detail";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "gS6-Mn-Nu7"; */
+"gS6-Mn-Nu7.text" = "Title";
+
+/* Class = "UITabBarItem"; title = "Здоровье"; ObjectID = "hDZ-0N-lOo"; */
+"hDZ-0N-lOo.title" = "Здоровье";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "kuo-Vz-yxU"; */
+"kuo-Vz-yxU.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "Info"; ObjectID = "p60-8q-VOB"; */
+"p60-8q-VOB.title" = "Info";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "p8z-yq-zYd"; */
+"p8z-yq-zYd.text" = "Detail";
+
+/* Class = "UITabBarItem"; title = "Инфо"; ObjectID = "uOh-eO-wru"; */
+"uOh-eO-wru.title" = "Инфо";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "vyY-qt-n9l"; */
+"vyY-qt-n9l.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "Здоровье"; ObjectID = "xsG-Jk-HgM"; */
+"xsG-Jk-HgM.title" = "Здоровье";
+
+/* Class = "UIButton"; normalTitle = "Продолжить"; ObjectID = "ztx-gg-t1Q"; */
+"ztx-gg-t1Q.normalTitle" = "Продолжить";

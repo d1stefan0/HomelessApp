@@ -2,8 +2,6 @@ import UIKit
 
 class EducationTableViewController: UITableViewController {
     
-    
-    
     let educationImage = [UIImage(named: "blackboard"), UIImage(named: "backpack"), UIImage(named: "univer"), UIImage(named: "diploma"), UIImage(named: "university")]
     let education = ["Выучить таблицу умножения", "Закончить школу", "Закончить ВУЗ", "Купить мастер-класс", "Учиться за границей"]
     let educationPrice = [0, 200, 500, 1000, 5000]
@@ -62,7 +60,7 @@ class EducationTableViewController: UITableViewController {
         if indexPath.section == 0 {
             return 100.0
         } else {
-            return 60.0
+            return 50.0
         }
     }
     

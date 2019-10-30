@@ -64,7 +64,7 @@ class WorkTableViewController: UITableViewController {
         if indexPath.section == 0 {
             return 100.0
         } else {
-            return 60.0
+            return 50.0
         }
     }
     

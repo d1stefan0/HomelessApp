@@ -19,9 +19,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func newGame(_ sender: Any) {
+        performSegue(withIdentifier: "new", sender: Any?.self)
     }
     
     @IBAction func continueGame(_ sender: Any) {
+        performSegue(withIdentifier: "load", sender: Any?.self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

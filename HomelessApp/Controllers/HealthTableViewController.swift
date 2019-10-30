@@ -10,9 +10,8 @@ import UIKit
 
 class HealthTableViewController: UITableViewController {
     
-    let health = ["Таблетки с помойки", "Полечиться у бабки", "Настоящий доктор", "Нормальная клиника", "Полечиться за границей"]
+    let health = HealthModel.fetchWork()
     let playerCell = "PlayerTableViewCell"
-    
     let person = Person.sharedPerson
     
     override func viewDidLoad() {
@@ -53,7 +52,9 @@ class HealthTableViewController: UITableViewController {
         } else {
             
             if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") {
-                cell.textLabel?.text = health[indexPath.row]
+                cell.textLabel?.text = health[indexPath.row].healthRus
+                cell.detailTextLabel?.text = "$\(health[indexPath.row].cost)"
+                cell.imageView?.image = health[indexPath.row].image
                 return cell
             }
         }
@@ -65,41 +66,26 @@ class HealthTableViewController: UITableViewController {
         if indexPath.section == 0 {
             return 100.0
         } else {
-            return 44.0
+            return 50.0
         }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        switch indexPath.row {
-        case 0:
-            person.health -= 1
-            person.money -= 1
-            person.eat -= 1
-            person.happiness -= 1
-        case 1:
-            person.health -= 12
-            person.money += 8
-            person.eat -= 1
-            person.happiness -= 1
-        case 2:
-            person.health -= 10
-            person.money += 5
-            person.eat -= 1
-            person.happiness -= 1
-        case 3:
-            person.health -= 12
-            person.money += 8
-            person.eat -= 1
-            person.happiness -= 1
-        case 4:
-            person.health -= 10
-            person.money += 5
-            person.eat -= 1
-            person.happiness -= 1
-        default:
-            print("chosen " + health[indexPath.row])
+        if indexPath.section == 1 {
+            
+            health(cost: health[indexPath.row].cost)
+            tableView.reloadData()
         }
-        tableView.reloadData()
     }
+    
+        private func health(cost: Int) {
+            person.money -= cost
+            person.eat += Int.random(in: 0...5)
+            person.health += Int.random(in: 0...5)
+            person.happiness += Int.random(in: 0...5)
+        
+            person.saveAll(health: person.health, money: person.money, eat: person.eat, happiness: person.happiness)
+        }
+        
 }
