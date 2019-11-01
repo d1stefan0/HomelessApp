@@ -12,7 +12,7 @@ class EatTableViewController: UITableViewController {
     
     let food = FoodModel.fetchWork()
     let playerCell = "PlayerTableViewCell"
-    let person = Person.sharedPerson
+    let person = Person.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,7 +101,7 @@ class EatTableViewController: UITableViewController {
         person.health += Int.random(in: 0...5)
         person.happiness += Int.random(in: 0...5)
     
-        person.saveAll(health: person.health, money: person.money, eat: person.eat, happiness: person.happiness)
+        person.save()
     }
     
 }

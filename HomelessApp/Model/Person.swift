@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 class Person{
     var health: Int
@@ -7,8 +8,7 @@ class Person{
     var happiness: Int
     let userDefaults = UserDefaults.standard
     
-    static let sharedPerson = Person(health: 0, money: 0, eat: 0, happiness: 0)
-    //let person = sharedPerson
+    static let shared = Person(health: 0, money: 0, eat: 0, happiness: 0)
     
     private init(health: Int, money: Int, eat: Int, happiness: Int) {
         self.health = health
@@ -17,28 +17,39 @@ class Person{
         self.happiness = happiness
     }
     
-    func saveAll (health: Int, money: Int, eat: Int, happiness: Int) {
-        saveHealth(health: health)
-        saveMoney(money: money)
-        saveEat(eat: eat)
-        saveHappiness(happiness: happiness)
-    }
-    
-    func saveHealth (health: Int) {
+    func save() {
         userDefaults.set(health, forKey: "person.health")
-    }
-    
-    func saveMoney (money: Int) {
         userDefaults.set(money, forKey: "person.money")
-    }
-    
-    func saveEat (eat: Int) {
         userDefaults.set(eat, forKey: "person.eat")
+        userDefaults.set(happiness, forKey: "person.happiness")
+        userDefaults.synchronize()
+        print("func save called")
     }
     
-    func saveHappiness (happiness: Int) {
-        userDefaults.set(happiness, forKey: "person.happiness")
-    }
+//    func saveAll (health: Int, money: Int, eat: Int, happiness: Int) {
+//        saveHealth(health: health)
+//        saveMoney(money: money)
+//        saveEat(eat: eat)
+//        saveHappiness(happiness: happiness)
+//        print("func save ALL called")
+//
+//    }
+//
+//    func saveHealth (health: Int) {
+//        userDefaults.set(health, forKey: "person.health")
+//    }
+//
+//    func saveMoney (money: Int) {
+//        userDefaults.set(money, forKey: "person.money")
+//    }
+//
+//    func saveEat (eat: Int) {
+//        userDefaults.set(eat, forKey: "person.eat")
+//    }
+//
+//    func saveHappiness (happiness: Int) {
+//        userDefaults.set(happiness, forKey: "person.happiness")
+//    }
     
     func loadData() {
         guard userDefaults.object(forKey: "person.health") != nil,
@@ -49,21 +60,25 @@ class Person{
 //            let alert = UIAlertController(title: "Нет сохраненных игр", message: "Начать новую игру?", preferredStyle: .alert)
 //            let okAction = UIAlertAction(title: "OK", style: .default)
 //            alert.addAction(okAction)
-//            self.present(alert, animated: true)
+//            self.present(alert, animation: true)
             return
         }      
         
-        Person.sharedPerson.health = userDefaults.object(forKey: "person.health") as! Int
-        Person.sharedPerson.money = userDefaults.object(forKey: "person.money") as! Int
-        Person.sharedPerson.eat = userDefaults.object(forKey: "person.eat") as! Int
-        Person.sharedPerson.happiness = userDefaults.object(forKey: "person.happiness") as! Int
+        Person.shared.health = userDefaults.object(forKey: "person.health") as! Int
+        Person.shared.money = userDefaults.object(forKey: "person.money") as! Int
+        Person.shared.eat = userDefaults.object(forKey: "person.eat") as! Int
+        Person.shared.happiness = userDefaults.object(forKey: "person.happiness") as! Int
+        print("func load called")
+
     }
 
-//    func newGame() {
-//        person.health = 100
-//        person.money = 1000
-//        person.eat = 100
-//        person.happiness = 100
-//    }
+    func newGame() {
+        Person.shared.health = 100
+        Person.shared.money = 1000
+        Person.shared.eat = 100
+        Person.shared.happiness = 100
+        print("func new game called")
+
+    }
     
 }

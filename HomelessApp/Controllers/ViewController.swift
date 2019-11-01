@@ -9,14 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    let person = Person.sharedPerson
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
     
     @IBAction func newGame(_ sender: Any) {
         performSegue(withIdentifier: "new", sender: Any?.self)
@@ -28,12 +27,10 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "new" {
-            person.health = 100
-            person.money = 1000
-            person.eat = 100
-            person.happiness = 100
+            Person.shared.newGame()
+            Person.shared.save()
         } else if segue.identifier == "load" {
-            person.loadData()
+            Person.shared.loadData()
         }
     }
 

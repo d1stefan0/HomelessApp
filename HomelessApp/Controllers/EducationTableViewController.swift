@@ -6,12 +6,11 @@ class EducationTableViewController: UITableViewController {
     let education = ["Выучить таблицу умножения", "Закончить школу", "Закончить ВУЗ", "Купить мастер-класс", "Учиться за границей"]
     let educationPrice = [0, 200, 500, 1000, 5000]
     let playerCell = "PlayerTableViewCell"
-    let person = Person.sharedPerson
+    let person = Person.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        person.loadData()
         tableView.register(UINib(nibName: playerCell, bundle: nil), forCellReuseIdentifier: "player")
         
         tableView?.delegate = self
@@ -79,7 +78,7 @@ class EducationTableViewController: UITableViewController {
     private func study(price: Int) -> Bool {
         if person.money >= price {
             person.money -= price
-            person.saveMoney(money: person.money)
+            person.save()
             
             let alert = UIAlertController(title: "Поздравляем", message: "Вы получили очередную ступень образования", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default)
