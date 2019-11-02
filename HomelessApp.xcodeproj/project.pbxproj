@@ -13,6 +13,7 @@
 		CE96B9A22359527700EE2579 /* WorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96B9A12359527700EE2579 /* WorkModel.swift */; };
 		CE96B9A4235F3D6400EE2579 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96B9A3235F3D6400EE2579 /* FoodModel.swift */; };
 		CE96B9A6235F415500EE2579 /* HealthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96B9A5235F415500EE2579 /* HealthModel.swift */; };
+		CE96B9CC236E0F8C00EE2579 /* EducationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96B9CB236E0F8C00EE2579 /* EducationModel.swift */; };
 		CEB877D723404C9B005B724D /* PlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB877D123404C9B005B724D /* PlayerTableViewCell.xib */; };
 		CEDA30D7234051500087E1BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86CAB52337B3A1000393A9 /* AppDelegate.swift */; };
 		CEDA30DD234051500087E1BB /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA30D423404F840087E1BB /* InfoViewController.swift */; };
@@ -38,6 +39,7 @@
 		CE96B9A3235F3D6400EE2579 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
 		CE96B9A5235F415500EE2579 /* HealthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthModel.swift; sourceTree = "<group>"; };
 		CE96B9C82369F5E200EE2579 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		CE96B9CB236E0F8C00EE2579 /* EducationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationModel.swift; sourceTree = "<group>"; };
 		CEB877CF23404C9A005B724D /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		CEB877D123404C9B005B724D /* PlayerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerTableViewCell.xib; sourceTree = "<group>"; };
 		CEDA30D423404F840087E1BB /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				CEDA30E4234055150087E1BB /* Person.swift */,
+				CE96B9CB236E0F8C00EE2579 /* EducationModel.swift */,
 				CE96B9A12359527700EE2579 /* WorkModel.swift */,
 				CE96B9A3235F3D6400EE2579 /* FoodModel.swift */,
 				CE96B9A5235F415500EE2579 /* HealthModel.swift */,
@@ -193,6 +196,7 @@
 				CE96B9A22359527700EE2579 /* WorkModel.swift in Sources */,
 				CEE995BC2359182A0059643B /* ViewController.swift in Sources */,
 				CEDA30E5234055150087E1BB /* Person.swift in Sources */,
+				CE96B9CC236E0F8C00EE2579 /* EducationModel.swift in Sources */,
 				CE96B9A4235F3D6400EE2579 /* FoodModel.swift in Sources */,
 				CEE995BA2354BDF60059643B /* EducationTableViewController.swift in Sources */,
 				CEDA30D7234051500087E1BB /* AppDelegate.swift in Sources */,

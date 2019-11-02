@@ -16,7 +16,6 @@ class PlayerTableViewCell: UITableViewCell {
     @IBOutlet weak var eatLabel: UILabel!
     @IBOutlet weak var happinessLabel: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

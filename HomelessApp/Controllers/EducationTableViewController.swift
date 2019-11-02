@@ -2,9 +2,7 @@ import UIKit
 
 class EducationTableViewController: UITableViewController {
     
-    let educationImage = [UIImage(named: "blackboard"), UIImage(named: "backpack"), UIImage(named: "univer"), UIImage(named: "diploma"), UIImage(named: "university")]
-    let education = ["Выучить таблицу умножения", "Закончить школу", "Закончить ВУЗ", "Купить мастер-класс", "Учиться за границей"]
-    let educationPrice = [0, 200, 500, 1000, 5000]
+    let education = EducationModel.fetchWork()
     let playerCell = "PlayerTableViewCell"
     let person = Person.shared
     
@@ -30,6 +28,13 @@ class EducationTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+//            return "Health Eat Happiness Money"
+            return "Здоровье Еда Счастье Деньги"
+        } else { return "" }
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
@@ -44,9 +49,9 @@ class EducationTableViewController: UITableViewController {
             
         } else {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") {
-                cell.imageView?.image = educationImage[indexPath.row]
-                cell.textLabel?.text = education[indexPath.row]
-                cell.detailTextLabel?.text = "$" + String( educationPrice[indexPath.row])
+                cell.textLabel?.text = education[indexPath.row].educationRus
+                cell.detailTextLabel?.text = "$\(education[indexPath.row].price)"
+                cell.imageView?.image = education[indexPath.row].image
                 return cell
                 
             }
@@ -56,17 +61,13 @@ class EducationTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         super.tableView(tableView, heightForRowAt: indexPath)
-        if indexPath.section == 0 {
-            return 100.0
-        } else {
-            return 50.0
-        }
+            return 50
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.section == 1 {
-            if study(price: educationPrice[indexPath.row]) {
+            if study(price: education[indexPath.row].price) {
                 tableView.cellForRow(at: indexPath)?.textLabel?.textColor = .gray
                 tableView.cellForRow(at: indexPath)?.detailTextLabel?.textColor = .gray
                 tableView.cellForRow(at: indexPath)?.isUserInteractionEnabled = false
