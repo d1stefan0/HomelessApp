@@ -28,6 +28,13 @@ class WorkTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            //            return "Health Eat Happiness Money"
+            return "Здоровье Еда Счастье Деньги"
+        } else { return "" }
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         //
@@ -72,7 +79,18 @@ class WorkTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.section == 1 {
             
+            guard person.workLevel >= indexPath.row else {
+                showCustomAlert(title: "Недостаточно умений", message: "Пройдите пожалуйста все работы по порядку")
+                return
+            }
+            
             work(salary: work[indexPath.row].salary)
+            print("New workLevel is \(person.workLevel + 1)")
+            person.workLevel += 1
+            
+            tableView.cellForRow(at: indexPath)?.textLabel?.textColor = .gray
+            tableView.cellForRow(at: indexPath)?.detailTextLabel?.textColor = .gray
+            tableView.cellForRow(at: indexPath)?.isUserInteractionEnabled = false
             tableView.reloadData()
         }
     }
@@ -82,7 +100,7 @@ class WorkTableViewController: UITableViewController {
         person.eat -= Int.random(in: 0...5)
         person.health -= Int.random(in: 0...5)
         person.happiness -= Int.random(in: 0...5)
-    
+        
         person.save()
     }
     

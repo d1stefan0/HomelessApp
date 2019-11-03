@@ -67,7 +67,15 @@ class EducationTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.section == 1 {
+            
+            guard person.educationLevel >= indexPath.row else {
+                showCustomAlert(title: "Недостаточно знаний", message: "Пройдите обучение по порядку")
+                return
+            }
+            
             if study(price: education[indexPath.row].price) {
+                print("New educationLevel is \(person.educationLevel + 1)")
+                person.educationLevel += 1
                 tableView.cellForRow(at: indexPath)?.textLabel?.textColor = .gray
                 tableView.cellForRow(at: indexPath)?.detailTextLabel?.textColor = .gray
                 tableView.cellForRow(at: indexPath)?.isUserInteractionEnabled = false
@@ -80,21 +88,32 @@ class EducationTableViewController: UITableViewController {
         if person.money >= price {
             person.money -= price
             person.save()
-            
-            let alert = UIAlertController(title: "Поздравляем", message: "Вы получили очередную ступень образования", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default)
-            alert.addAction(okAction)
-            self.present(alert, animated: true)
-            
+            showCustomAlert(title: "Поздравляем", message: "Вы получили очередную ступень образования")
             return true
-        } else {
-            let alert = UIAlertController(title: "Недостаточно денег", message: "Для получения образования нужно минимум \(price) долларов", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default)
-            alert.addAction(okAction)
-            self.present(alert, animated: true)
             
+        } else {
+            showCustomAlert(title: "Недостаточно денег", message: "Для получения образования нужно минимум \(price) долларов")
             return false
         }
     }
     
+}
+
+extension UITableViewController {
+    func showCustomAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        alert.view.backgroundColor = UIColor.black
+        alert.view.tintColor = UIColor.white
+        alert.view.layer.cornerRadius = 25
+        //alert.view.center
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        
+        self.present(alert, animated: true)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+             alert.dismiss(animated: true, completion: nil)
+        }
+    }
 }
