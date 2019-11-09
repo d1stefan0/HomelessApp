@@ -14,9 +14,12 @@
 		CE96B9A4235F3D6400EE2579 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96B9A3235F3D6400EE2579 /* FoodModel.swift */; };
 		CE96B9A6235F415500EE2579 /* HealthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96B9A5235F415500EE2579 /* HealthModel.swift */; };
 		CE96B9CC236E0F8C00EE2579 /* EducationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96B9CB236E0F8C00EE2579 /* EducationModel.swift */; };
+		CE96B9F72376F60800EE2579 /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96B9F62376F60800EE2579 /* DarkTheme.swift */; };
+		CE96B9F92376F61800EE2579 /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96B9F82376F61800EE2579 /* LightTheme.swift */; };
+		CE96B9FB2376F69500EE2579 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE96B9FA2376F69500EE2579 /* Colors.xcassets */; };
+		CE96B9FD2376F85600EE2579 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96B9FC2376F85600EE2579 /* Theme.swift */; };
 		CEB877D723404C9B005B724D /* PlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB877D123404C9B005B724D /* PlayerTableViewCell.xib */; };
 		CEDA30D7234051500087E1BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86CAB52337B3A1000393A9 /* AppDelegate.swift */; };
-		CEDA30DD234051500087E1BB /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA30D423404F840087E1BB /* InfoViewController.swift */; };
 		CEDA30DF234051500087E1BB /* WorkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86CAE523399C75000393A9 /* WorkTableViewController.swift */; };
 		CEDA30E0234051500087E1BB /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB877CF23404C9A005B724D /* PlayerTableViewCell.swift */; };
 		CEDA30E3234052760087E1BB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA30E2234052760087E1BB /* SettingsViewController.swift */; };
@@ -40,9 +43,12 @@
 		CE96B9A5235F415500EE2579 /* HealthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthModel.swift; sourceTree = "<group>"; };
 		CE96B9C82369F5E200EE2579 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		CE96B9CB236E0F8C00EE2579 /* EducationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationModel.swift; sourceTree = "<group>"; };
+		CE96B9F62376F60800EE2579 /* DarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; };
+		CE96B9F82376F61800EE2579 /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
+		CE96B9FA2376F69500EE2579 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		CE96B9FC2376F85600EE2579 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		CEB877CF23404C9A005B724D /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		CEB877D123404C9B005B724D /* PlayerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerTableViewCell.xib; sourceTree = "<group>"; };
-		CEDA30D423404F840087E1BB /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		CEDA30E2234052760087E1BB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CEDA30E4234055150087E1BB /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		CEDA3185234A21E70087E1BB /* EatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatTableViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +85,6 @@
 			children = (
 				CEE995BB2359182A0059643B /* ViewController.swift */,
 				CEDA30E2234052760087E1BB /* SettingsViewController.swift */,
-				CEDA30D423404F840087E1BB /* InfoViewController.swift */,
 				CEE995B92354BDF50059643B /* EducationTableViewController.swift */,
 				CE86CAE523399C75000393A9 /* WorkTableViewController.swift */,
 				CEDA3185234A21E70087E1BB /* EatTableViewController.swift */,
@@ -113,11 +118,23 @@
 				CE86CAB92337B3A1000393A9 /* Main.storyboard */,
 				CE76260D233F8DB5003B82CB /* Model */,
 				CE76260E233F8DC7003B82CB /* Controllers */,
+				CE96B9F52376F5E400EE2579 /* Themes */,
 				CE86CABC2337B3A2000393A9 /* Assets.xcassets */,
 				CE86CABE2337B3A2000393A9 /* LaunchScreen.storyboard */,
 				CE86CAC12337B3A2000393A9 /* Info.plist */,
 			);
 			path = HomelessApp;
+			sourceTree = "<group>";
+		};
+		CE96B9F52376F5E400EE2579 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				CE96B9FC2376F85600EE2579 /* Theme.swift */,
+				CE96B9F62376F60800EE2579 /* DarkTheme.swift */,
+				CE96B9F82376F61800EE2579 /* LightTheme.swift */,
+				CE96B9FA2376F69500EE2579 /* Colors.xcassets */,
+			);
+			path = Themes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE96B9FB2376F69500EE2579 /* Colors.xcassets in Resources */,
 				CE86CAC02337B3A2000393A9 /* LaunchScreen.storyboard in Resources */,
 				CEB877D723404C9B005B724D /* PlayerTableViewCell.xib in Resources */,
 				CE86CABD2337B3A2000393A9 /* Assets.xcassets in Resources */,
@@ -198,14 +216,16 @@
 				CEDA30E5234055150087E1BB /* Person.swift in Sources */,
 				CE96B9CC236E0F8C00EE2579 /* EducationModel.swift in Sources */,
 				CE96B9A4235F3D6400EE2579 /* FoodModel.swift in Sources */,
+				CE96B9F92376F61800EE2579 /* LightTheme.swift in Sources */,
 				CEE995BA2354BDF60059643B /* EducationTableViewController.swift in Sources */,
 				CEDA30D7234051500087E1BB /* AppDelegate.swift in Sources */,
 				CEDA3188234D5C2F0087E1BB /* HealthTableViewController.swift in Sources */,
-				CEDA30DD234051500087E1BB /* InfoViewController.swift in Sources */,
+				CE96B9F72376F60800EE2579 /* DarkTheme.swift in Sources */,
 				CEDA30DF234051500087E1BB /* WorkTableViewController.swift in Sources */,
 				CEDA3186234A21E70087E1BB /* EatTableViewController.swift in Sources */,
 				CEDA30E0234051500087E1BB /* PlayerTableViewCell.swift in Sources */,
 				CEDA30E3234052760087E1BB /* SettingsViewController.swift in Sources */,
+				CE96B9FD2376F85600EE2579 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

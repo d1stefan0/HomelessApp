@@ -10,14 +10,39 @@ class WorkTableViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.register(UINib(nibName: playerCell, bundle: nil), forCellReuseIdentifier: "player")
-        
+        tableView.tableFooterView = UIView()
         tableView?.delegate = self
         tableView?.dataSource = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setupTheme()
+        tableView.reloadData()
+    }
+    
+    func setupTheme() {
+        let theme = Theme.currentTheme
+        
+        self.view.backgroundColor = theme.bgColor
+        tableView.backgroundColor = theme.bgColor
+        tableView.separatorColor = theme.accentColor
+        
+        navigationController?.navigationBar.tintColor = theme.bgColor
+        navigationController?.navigationBar.barTintColor = theme.bgColor
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: theme.textColor]
+        tabBarController?.tabBar.barTintColor = theme.bgColor
     }
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+//            return "Health Eat Happiness Money"
+            return "Здоровье Еда Счастье Деньги"
+        } else { return "" }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,13 +51,6 @@ class WorkTableViewController: UITableViewController {
         } else {
             return work.count
         }
-    }
-    
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-            //            return "Health Eat Happiness Money"
-            return "Здоровье Еда Счастье Деньги"
-        } else { return "" }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,7 +77,8 @@ class WorkTableViewController: UITableViewController {
                 cell.textLabel?.text = work[indexPath.row].workRus
                 cell.detailTextLabel?.text = "$\(work[indexPath.row].salary)"
                 cell.imageView?.image = work[indexPath.row].image
-                cell.detailTextLabel?.textColor = .green
+                cell.textLabel?.textColor = person.workLevel > indexPath.row ? Theme.currentTheme.accentColor : Theme.currentTheme.textColor
+                cell.detailTextLabel?.textColor = person.workLevel > indexPath.row ? Theme.currentTheme.accentColor : Theme.currentTheme.textColor
                 return cell
             }
         }
@@ -68,11 +87,7 @@ class WorkTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         super.tableView(tableView, heightForRowAt: indexPath)
-        if indexPath.section == 0 {
-            return 100.0
-        } else {
             return 50.0
-        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -80,26 +95,44 @@ class WorkTableViewController: UITableViewController {
         if indexPath.section == 1 {
             
             guard person.workLevel >= indexPath.row else {
-                showCustomAlert(title: "Недостаточно умений", message: "Пройдите пожалуйста все работы по порядку")
+                showCustomAlert(title: "Недостаточно навыков для этой работы", message: "Пройдите пожалуйста все работы по порядку")
                 return
             }
             
-            work(salary: work[indexPath.row].salary)
-            print("New workLevel is \(person.workLevel + 1)")
-            person.workLevel += 1
+            work(salary: work[indexPath.row].salary, coeff: indexPath.row)
+            person.workLevel = (indexPath.row + 1) > person.workLevel ? (indexPath.row + 1) : person.workLevel
+            print("New workLevel is \(person.workLevel)")
             
-            tableView.cellForRow(at: indexPath)?.textLabel?.textColor = .gray
-            tableView.cellForRow(at: indexPath)?.detailTextLabel?.textColor = .gray
-            tableView.cellForRow(at: indexPath)?.isUserInteractionEnabled = false
+            tableView.cellForRow(at: indexPath)?.textLabel?.textColor = Theme.currentTheme.accentColor
+            tableView.cellForRow(at: indexPath)?.detailTextLabel?.textColor = Theme.currentTheme.accentColor
             tableView.reloadData()
         }
     }
     
-    private func work(salary: Int) {
+    private func work(salary: Int, coeff: Int) {
+        let eat = Int.random(in: 1...4) * coeff
+        let health = Int.random(in: 1...4) * coeff
+        let happiness = Int.random(in: 1...4) * (5 - coeff)
+        guard (person.eat - eat) > 0
+            else {
+                showCustomAlert(title: "Вы слишком голодны", message: "Поднимите уровень сытости, чтобы работать и дальше")
+                return
+            }
+        guard (person.health - health) > 0
+            else {
+                showCustomAlert(title: "Недостаточно здоровья", message: "Поднимите уровень здоровья, чтобы работать и дальше")
+                return
+            }
+        guard (person.happiness - happiness) > 0
+            else {
+                showCustomAlert(title: "Недостаточно счастья", message: "Поднимите уровень счастья, чтобы работать и дальше")
+                return
+            }
+        
+        person.eat -= eat
+        person.health -= health
+        person.happiness -= happiness
         person.money += salary
-        person.eat -= Int.random(in: 0...5)
-        person.health -= Int.random(in: 0...5)
-        person.happiness -= Int.random(in: 0...5)
         
         person.save()
     }

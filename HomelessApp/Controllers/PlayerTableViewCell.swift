@@ -22,6 +22,11 @@ class PlayerTableViewCell: UITableViewCell {
         //eatLabel.textColor = .green
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        //initXib(view: self)
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

@@ -18,6 +18,24 @@ class EatTableViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.register(UINib(nibName: playerCell, bundle: nil), forCellReuseIdentifier: "player")
+        tableView.tableFooterView = UIView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setupTheme()
+        tableView.reloadData()
+    }
+    
+    func setupTheme() {
+        let theme = Theme.currentTheme
+        
+        self.view.backgroundColor = theme.bgColor
+        tableView.backgroundColor = theme.bgColor
+        
+        navigationController?.navigationBar.tintColor = theme.bgColor
+        navigationController?.navigationBar.barTintColor = theme.bgColor
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: theme.textColor]
+        tabBarController?.tabBar.barTintColor = theme.bgColor
     }
     
     // MARK: - Table view data source
@@ -25,6 +43,13 @@ class EatTableViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 2
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+//            return "Health Eat Happiness Money"
+            return "Здоровье Еда Счастье Деньги"
+        } else { return "" }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,7 +94,8 @@ class EatTableViewController: UITableViewController {
                 cell.textLabel?.text = food[indexPath.row].foodRus
                 cell.detailTextLabel?.text = "$\(food[indexPath.row].cost)"
                 cell.imageView?.image = food[indexPath.row].image
-                cell.detailTextLabel?.textColor = .blue
+                cell.textLabel?.textColor = Theme.currentTheme.textColor
+                cell.detailTextLabel?.textColor = Theme.currentTheme.textColor
                 return cell
             }
         }
@@ -79,27 +105,29 @@ class EatTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         super.tableView(tableView, heightForRowAt: indexPath)
-        if indexPath.section == 0 {
-            return 100.0
-        } else {
-            return 50.0
-        }
+             return 50.0
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.section == 1 {
             
-            eat(cost: food[indexPath.row].cost)
+            eat(cost: food[indexPath.row].cost, coeff: indexPath.row + 1)
             tableView.reloadData()
         }
     }
     
-    private func eat(cost: Int) {
+    private func eat(cost: Int, coeff: Int) {
+        guard (person.money - cost) > 0
+            else {
+                showCustomAlert(title: "Недостаточно денег", message: "Недостаточно денег для покупки")
+                return
+            }
+        
         person.money -= cost
-        person.eat += Int.random(in: 0...5)
-        person.health += Int.random(in: 0...5)
-        person.happiness += Int.random(in: 0...5)
+        person.eat += Int.random(in: 0...3) * coeff
+        person.health += Int.random(in: 0...3) * coeff
+        person.happiness += Int.random(in: 0...3) * coeff
     
         person.save()
     }

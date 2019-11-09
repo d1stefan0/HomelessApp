@@ -6,7 +6,6 @@
 //  Copyright © 2019 DiStefanoTeam. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 struct WorkModel {

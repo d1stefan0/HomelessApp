@@ -9,7 +9,7 @@
 "7f0-Qg-ldB.title" = "Работа";
 
 /* Class = "UINavigationItem"; title = "Образовние"; ObjectID = "A2N-zY-A8n"; */
-"A2N-zY-A8n.title" = "Education";
+"A2N-zY-A8n.title" = "Образование";
 
 /* Class = "UITabBarItem"; title = "Еда"; ObjectID = "B7h-Ek-z28"; */
 "B7h-Ek-z28.title" = "Еда";
@@ -57,7 +57,7 @@
 "p8z-yq-zYd.text" = "Detail";
 
 /* Class = "UITabBarItem"; title = "Инфо"; ObjectID = "uOh-eO-wru"; */
-"uOh-eO-wru.title" = "Инфо";
+"uOh-eO-wru.title" = "Настройки";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "vyY-qt-n9l"; */
 "vyY-qt-n9l.text" = "Title";
