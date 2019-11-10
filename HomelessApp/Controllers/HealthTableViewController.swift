@@ -11,14 +11,14 @@ import UIKit
 class HealthTableViewController: UITableViewController {
     
     let health = HealthModel.fetchWork()
-    let playerCell = "PlayerTableViewCell"
+    let playerCell = "PersonTableViewCell"
     let person = Person.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: playerCell, bundle: nil), forCellReuseIdentifier: "player")
         tableView.tableFooterView = UIView()
+        tableView.register(UINib(nibName: playerCell, bundle: nil), forCellReuseIdentifier: "player")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,12 +44,12 @@ class HealthTableViewController: UITableViewController {
         return 2
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-//            return "Health Eat Happiness Money"
-            return "Здоровье Еда Счастье Деньги"
-        } else { return "" }
-    }
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        if section == 0 {
+////            return "Health Eat Happiness Money"
+//            return "Здоровье Еда Счастье Деньги"
+//        } else { return "" }
+//    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
@@ -63,7 +63,7 @@ class HealthTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "player") as! PlayerTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "player") as! PersonTableViewCell
             
             cell.healthLabel.text = String(person.health)
             cell.moneyLabel.text = String(person.money)
@@ -102,7 +102,7 @@ class HealthTableViewController: UITableViewController {
     }
     
     private func health(cost: Int, coeff: Int) {
-            guard (person.money - cost) > 0
+            guard (person.money - cost) >= 0
                 else {
                     showCustomAlert(title: "Недостаточно денег", message: "Недостаточно денег для покупки")
                     return

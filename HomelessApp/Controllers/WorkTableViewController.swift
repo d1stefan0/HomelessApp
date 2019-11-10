@@ -3,16 +3,17 @@ import UIKit
 class WorkTableViewController: UITableViewController {
     
     let work = WorkModel.fetchWork()
-    let playerCell = "PlayerTableViewCell"
+    let playerCell = "PersonTableViewCell"
     let person = Person.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: playerCell, bundle: nil), forCellReuseIdentifier: "player")
         tableView.tableFooterView = UIView()
         tableView?.delegate = self
         tableView?.dataSource = self
+        
+        tableView.register(UINib(nibName: playerCell, bundle: nil), forCellReuseIdentifier: "player")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -38,12 +39,12 @@ class WorkTableViewController: UITableViewController {
         return 2
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-//            return "Health Eat Happiness Money"
-            return "Здоровье Еда Счастье Деньги"
-        } else { return "" }
-    }
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        if section == 0 {
+////            return "Health Eat Happiness Money"
+//            return "Здоровье Еда Счастье Деньги"
+//        } else { return "" }
+//    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
@@ -61,7 +62,7 @@ class WorkTableViewController: UITableViewController {
         //
         
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "player") as! PlayerTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "player") as! PersonTableViewCell
             
             cell.healthLabel.text = String(person.health)
             cell.moneyLabel.text = String(person.money)
@@ -123,7 +124,7 @@ class WorkTableViewController: UITableViewController {
                 showCustomAlert(title: "Недостаточно здоровья", message: "Поднимите уровень здоровья, чтобы работать и дальше")
                 return
             }
-        guard (person.happiness - happiness) > 0
+        guard (person.happiness - happiness) >= 0
             else {
                 showCustomAlert(title: "Недостаточно счастья", message: "Поднимите уровень счастья, чтобы работать и дальше")
                 return

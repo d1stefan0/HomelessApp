@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "backpack.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "backpack.png",
       "scale" : "2x"
     },
     {

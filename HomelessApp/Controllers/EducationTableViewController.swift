@@ -3,7 +3,7 @@ import UIKit
 class EducationTableViewController: UITableViewController {
     
     let education = EducationModel.fetchWork()
-    let playerCell = "PlayerTableViewCell"
+    let playerCell = "PersonTableViewCell"
     let person = Person.shared
     
     override func viewDidLoad() {
@@ -14,10 +14,12 @@ class EducationTableViewController: UITableViewController {
         self.tableView?.dataSource = self
         
         // Set resizable table bounds
-        self.tableView.frame = self.view.bounds
-        self.tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        self.tableView.frame = self.view.bounds
+//        self.tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         tableView.register(UINib(nibName: playerCell, bundle: nil), forCellReuseIdentifier: "player")
+
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,17 +53,21 @@ class EducationTableViewController: UITableViewController {
         }
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-//            return "Health Eat Happiness Money"
-            return "Здоровье Еда Счастье Деньги"
-        } else { return "" }
-    }
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        if section == 0 {
+////            return "Health Eat Happiness Money"
+//            return "Здоровье Еда Счастье Деньги"
+//        } else { return "" }
+//    }
+//
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        <#code#>
+//    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
-            let cell: PlayerTableViewCell = tableView.dequeueReusableCell(withIdentifier: "player", for: indexPath) as! PlayerTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "player", for: indexPath) as! PersonTableViewCell
             
             cell.healthLabel.text = String(person.health)
             cell.moneyLabel.text = String(person.money)
