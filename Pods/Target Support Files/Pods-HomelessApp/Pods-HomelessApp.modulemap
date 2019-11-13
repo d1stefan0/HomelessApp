@@ -1,0 +1,6 @@
+framework module Pods_HomelessApp {
+  umbrella header "Pods-HomelessApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

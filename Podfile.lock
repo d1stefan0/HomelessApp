@@ -1,0 +1,16 @@
+PODS:
+  - SwipeableTabBarController (2.1.1)
+
+DEPENDENCIES:
+  - SwipeableTabBarController
+
+SPEC REPOS:
+  trunk:
+    - SwipeableTabBarController
+
+SPEC CHECKSUMS:
+  SwipeableTabBarController: 8f7f04275f510c5babb630f7be1161b5f28567e0
+
+PODFILE CHECKSUM: a762878b4ecdc6209b5a5fd4c7a27e4b0ddb6e90
+
+COCOAPODS: 1.8.4
