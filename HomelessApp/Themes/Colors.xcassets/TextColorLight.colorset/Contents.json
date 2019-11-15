@@ -7,9 +7,19 @@
     {
       "idiom" : "universal",
       "color" : {
-        "platform" : "ios",
-        "reference" : "darkTextColor"
-      }
+        "color-space" : "srgb",
+        "components" : {
+          "red" : "0.263",
+          "alpha" : "1.000",
+          "blue" : "0.263",
+          "green" : "0.263"
+        }
+      },
+      "display-gamut" : "sRGB"
+    },
+    {
+      "idiom" : "universal",
+      "display-gamut" : "display-P3"
     }
   ]
 }
