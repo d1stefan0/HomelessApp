@@ -219,7 +219,7 @@
                                 </state>
                                 <connections>
                                     <action selector="newGame:" destination="bXd-Ns-CrZ" eventType="touchUpInside" id="Lks-NU-yax"/>
-                                    <segue destination="q3C-Pz-gEN" kind="presentation" identifier="new" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="sMR-Ge-kaw"/>
+                                    <segue destination="q3C-Pz-gEN" kind="presentation" identifier="new" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="sMR-Ge-kaw"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeless" translatesAutoresizingMaskIntoConstraints="NO" id="cp2-OF-8Ko">
@@ -555,6 +555,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ewz-k3-sLp"/>
+        <segue reference="sMR-Ge-kaw"/>
     </inferredMetricsTieBreakers>
 </document>
